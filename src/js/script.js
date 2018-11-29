@@ -1,7 +1,7 @@
 /* Configuração inicial do tabuleiro*/
 let nrLinhaMatriz = 5;
 let nrColunaMatriz = 5;
-let rainhas = 5;
+let rainhas = 7;
 
 /* Variáveis Globais */
 let solucoes = 0;
@@ -49,7 +49,11 @@ let backtracking = (rainhas, col) => {
     matrizSolucao.attr('type', 'solution' + (solucoes + 1));
     matrizSolucao.removeClass('hide');
     $('.resultados').append(matrizSolucao);
-    $('div[type="solution' + (solucoes + 1)).before('<span class="span-solucao">Solução ' + (solucoes + 1) + '</span>');
+    $('div[type="solution' + (solucoes + 1)).before('<span class="span-solucao' + (solucoes + 1) + '">Solução ' + (solucoes + 1) + '</span>');
+    $('.span-solucao' + (solucoes + 1)).before('<div class="try try' + (solucoes + 1) + '"></div>');
+    $('.try' + (solucoes + 1) + '')
+      .prepend($('div[type="solution' + (solucoes + 1)))
+      .prepend($('.span-solucao' + (solucoes + 1)));
     console.log('\nSolucao ' + (solucoes + 1) + ' encontrada.');
     solucoes++;
     return;
