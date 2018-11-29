@@ -1,7 +1,8 @@
 /* Configuração inicial do tabuleiro*/
-let nrLinhaMatriz = 5;
-let nrColunaMatriz = 5;
-let rainhas = 7;
+let nrLinhaEColuna = 8;
+let nrLinhaMatriz = nrLinhaEColuna;
+let nrColunaMatriz = nrLinhaEColuna;
+let rainhas = 5;
 
 /* Variáveis Globais */
 let solucoes = 0;
@@ -17,6 +18,9 @@ let criaTabuleiro = (nrLinhaMatriz, nrColunaMatriz) => {
   let matriz = $('.matriz');
   for (let i = 0; i < nrLinhaMatriz; i++) {
     matriz.append("<div class='linha'>");
+    if (nrColunaMatriz % 2 == 0) {
+      inverteCor = !inverteCor;
+    }
     for (let j = 0; j < nrColunaMatriz; j++) {
       let bloco = "<div class='bloco " + (inverteCor ? 'black' : 'white') + "' linha=" + i + ' coluna=' + j + '></div>';
       inverteCor = !inverteCor;
@@ -41,9 +45,6 @@ let removeRainha = (li, col) => {
 	retorna true se conseguiu resolver e false caso contrário
 */
 let backtracking = (rainhas, col) => {
-  /*if (solucoes > 1) {
-    return;
-  }*/
   if (col == rainhas) {
     let matrizSolucao = $('.matriz[type="default"]').clone();
     matrizSolucao.attr('type', 'solution' + (solucoes + 1));
