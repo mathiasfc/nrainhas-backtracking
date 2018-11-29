@@ -1,29 +1,44 @@
 .matriz {
-  border: 1px solid red;
+  border: 1px solid black;
   width: auto;
   height: auto;
-  text-align: center;
+  display: inline-grid;
+  margin-left: 10px;
+  margin-top: 20px;
 }
 
-.matriz:first-of-type{
+.matriz:first-of-type {
   display: none;
 }
 
 .linha {
   display: block;
+  height: 36px;
 }
 
 .bloco {
-  padding: 20px;
+  height: 36px;
   display: inline-block;
-  border: 1px solid black;
-  width: 5px;
+  width: 36px;
+}
+
+.white {
+  background: white;
+}
+
+.black {
+  background: rgb(160, 160, 160);
 }
 
 .rainha {
-  background: red !important;
+  background-image: url('../assets/black_queen.png');
+  background-size: auto;
+  background-position: 3px 1px;
 }
 
-.marcada {
-  background: yellow;
+.span-solucao {
+  color: red;
+  position: absolute;
+  margin-left: 10px;
+  font-weight: bold;
 }
