@@ -1,0 +1,29 @@
+.matriz {
+  border: 1px solid red;
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+.matriz:first-of-type{
+  display: none;
+}
+
+.linha {
+  display: block;
+}
+
+.bloco {
+  padding: 20px;
+  display: inline-block;
+  border: 1px solid black;
+  width: 5px;
+}
+
+.rainha {
+  background: red !important;
+}
+
+.marcada {
+  background: yellow;
+}
