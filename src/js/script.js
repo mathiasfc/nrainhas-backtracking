@@ -1,8 +1,8 @@
 /* Configuração inicial do tabuleiro*/
-let nrLinhaEColuna = 8;
+let nrLinhaEColuna = 4;
 let nrLinhaMatriz = nrLinhaEColuna;
 let nrColunaMatriz = nrLinhaEColuna;
-let rainhas = 5;
+let rainhas = 7;
 
 /* Variáveis Globais */
 let solucoes = 0;
@@ -60,6 +60,7 @@ let backtracking = (rainhas, col) => {
     return;
   }
   for (let i = 0; i < rainhas; i++) {
+    debugger;
     // verifica se é seguro colocar a rainha naquela coluna
     if (posicaoValida(rainhas, i, col)) {
       addRainha(i, col);
