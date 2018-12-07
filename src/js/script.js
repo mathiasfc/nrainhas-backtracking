@@ -1,8 +1,8 @@
 /* Configuração inicial do tabuleiro*/
-let nrLinhaEColuna = 4;
+let nrLinhaEColuna = 5;
 let nrLinhaMatriz = nrLinhaEColuna;
 let nrColunaMatriz = nrLinhaEColuna;
-let rainhas = 7;
+let rainhas = 5;
 
 /* Variáveis Globais */
 let solucoes = 0;

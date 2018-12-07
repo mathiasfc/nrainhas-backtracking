@@ -10,8 +10,11 @@ O algoritmo foi desenvolvido com JS e pode ser executado em qualquer navegador, 
 
 ```
 /* Configuração inicial do tabuleiro*/
-let nrLinhaEColuna = 4;
+let nrLinhaEColuna = 5;
 let nrLinhaMatriz = nrLinhaEColuna;
 let nrColunaMatriz = nrLinhaEColuna;
-let rainhas = 7;
+let rainhas = 5;
 ```
+
+### Saída
+[[https://github.com/mathiasfc/nrainhas-backtracking/blob/master/src/assets/5x5.png|alt=saida]]
