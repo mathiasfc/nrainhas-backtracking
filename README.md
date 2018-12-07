@@ -17,4 +17,4 @@ let rainhas = 5;
 ```
 
 ### Saída
-![saida]('https://github.com/mathiasfc/nrainhas-backtracking/blob/master/src/assets/5x5.png?raw=true')
+![]('https://github.com/mathiasfc/nrainhas-backtracking/blob/master/src/assets/5x5.png')
